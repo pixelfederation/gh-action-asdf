@@ -6,7 +6,7 @@ runs:
   main: main.js
 inputs:
   directory:
-    description: Directory where .tool-versions is located
+    description: Directory where to run asdf current
     required: false
     default: .
   save_to:

@@ -1339,12 +1339,10 @@ async function toolsCurrent() {
   if (save === "no") {
     return;
   }
-  if (directory !== saveTo) {
-    saveTo = !saveTo.endsWith("/") ? `${saveTo}/` : saveTo;
-    await fs2.promises.writeFile(`${saveTo}.tool-versions`, rawOut, {
-      encoding: "utf8"
-    });
-  }
+  saveTo = !saveTo.endsWith("/") ? `${saveTo}/` : saveTo;
+  await fs2.promises.writeFile(`${saveTo}.tool-versions`, rawOut, {
+    encoding: "utf8"
+  });
 }
 
 // lib/current/main.ts

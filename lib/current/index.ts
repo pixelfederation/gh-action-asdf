@@ -41,10 +41,8 @@ export async function toolsCurrent(): Promise<void> {
   if (save === "no") {
     return;
   }
-  if (directory !== saveTo) {
-    saveTo = !saveTo.endsWith("/") ? `${saveTo}/` : saveTo;
-    await fs.promises.writeFile(`${saveTo}.tool-versions`, rawOut, {
-      encoding: "utf8",
-    });
-  }
+  saveTo = !saveTo.endsWith("/") ? `${saveTo}/` : saveTo;
+  await fs.promises.writeFile(`${saveTo}.tool-versions`, rawOut, {
+    encoding: "utf8",
+  });
 }
