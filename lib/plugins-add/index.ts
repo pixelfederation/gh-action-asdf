@@ -32,7 +32,7 @@ export async function pluginsAdd(): Promise<void> {
   await setupAsdf();
   let toolVersions = core.getInput("tool_versions", { required: false });
   let directory = core.getInput("directory", { required: false });
-  directory = !directory.endsWith("/") ? `${directory}/` : directory
+  directory = !directory.endsWith("/") ? `${directory}/` : directory;
 
   if (toolVersions) {
     await fs.promises.writeFile(`${directory}.tool-versions`, toolVersions, {

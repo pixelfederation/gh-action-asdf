@@ -2,7 +2,7 @@ name: asdf current
 description: Get current tools versions
 author: Tomas Hulata <hulata@sysart.tech>
 runs:
-  using: node16
+  using: node20
   main: main.js
 inputs:
   directory:
