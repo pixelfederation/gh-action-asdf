@@ -9,7 +9,7 @@ export async function toolsCurrent(): Promise<void> {
   const directory = core.getInput("directory", { required: false });
   let saveTo = core.getInput("save_to", { required: false });
   const save = core.getInput("save", { required: false });
-  const options = {};
+  const options: exec.ExecOptions = {};
   let stdOut = "";
 
   options.listeners = {

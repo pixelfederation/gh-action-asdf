@@ -5,7 +5,9 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true
+    "strict": true,
+    "target": "es2015",
+    "moduleResolution": "node"
   },
   "exclude": ["install", "node_modules", "plugin-test", "plugins-add", "setup"]
 }
