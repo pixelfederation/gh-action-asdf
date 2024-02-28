@@ -53,6 +53,7 @@ jobs:
         shell: bash
         run: |
           yarn build
+          yarn fmt
           if [ "$(git status --porcelain | wc -l)" -gt "0" ]; then
             echo "Detected uncommitted changes after build. See status below:"
             git diff
